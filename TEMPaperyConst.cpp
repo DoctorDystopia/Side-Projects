@@ -12,6 +12,8 @@
 using namespace std;
 
 void generateCandidates(int*); // Generates potential coprime set
+__int16	gcd(__int16 a, __int16 b) // Greatest common divisor
+bool isCoprime(__int16 cand[]) // Checks if number set is coprime
 
 int *cand = (int*) malloc(3 * sizeof(int)); // If defined here, where to deallocate?
 const int MAX = 100; // sample size
@@ -80,6 +82,7 @@ __int16	gcd(__int16 a, __int16 b) {
 }
 
 // Checks if generated 3 number set is coprime
+// Not using cand pointer correctly here probably
 bool isCoprime(__int16 cand[]) {
     cout << "isCoprime cand: " << cand[0] << " " << cand[1] << " " << cand[2] << endl;
     bool temp = gcd(cand[0],cand[1]);
