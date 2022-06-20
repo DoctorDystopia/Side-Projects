@@ -68,12 +68,13 @@ __int16	gcd(__int16 a, __int16 b) {
 		swap(a,b);
 	}
 
+	// Probably don't need a while loop here
 	while(b > 0)
-   {
+   	{
 	  __int16 temp = a % b;
 	  a = b;
 	  b = temp;
-   }
+   	}
    
    return a;
 }
